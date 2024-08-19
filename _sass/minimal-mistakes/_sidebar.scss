@@ -50,7 +50,7 @@
   h4,
   h5,
   h6 {
-    margin-bottom: 0;
+    margin-bottom: 20px;
     font-family: $sans-serif-narrow;
   }
 
@@ -134,8 +134,8 @@
   }
 
   img {
-    max-width: 110px;
-    border-radius: 50%;
+    max-width: 150px; //default: 110
+    border-radius: 15%; //default: 100
 
     @include breakpoint($large) {
       padding: 5px;

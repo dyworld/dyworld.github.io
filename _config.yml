@@ -17,18 +17,17 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "ko-KR" #en-US
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "쉽게 정리한 개발 블로그"
-title_separator          : "-"
+title                    : "Dayoung's Blog"
+title_separator          : # "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "dayoung lee"
+name                     : "Dayoung Lee"
 description              : ""
-# url                      : "https://dyworld.github.io"
-url                      : "http://localhost:4000"
+url                      : "https://dyworld.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # "/assets/images/profile.jpeg"
-masthead_title           : "쉽게 정리한 개발 블로그"
+teaser                   : # "/assets/images/icons8-개발자-96.png"
+logo                     : # "/assets/images/justDoIt.png"
+masthead_title           : #
 breadcrumbs              : # true, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)
@@ -114,10 +113,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "dylee"
+  name             : "DaYoung Lee"
   avatar           : "/assets/images/profile.jpeg"
-  bio              : "어려운 내용, 쉽게 정리해보겠습니다 :)"
-  location         : "Republic of Korea"
+  bio              : # "DaYoung Lee"
+  location         : # "South Korea"
   email            :
   links:
     - label: "Email"
@@ -134,7 +133,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/dyworld"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -150,7 +149,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/dyworld"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -193,6 +192,7 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
+  - minimal-mistakes-jekyll.gemspec # 해당 파일이 _site 폴더에 자동 생성되지 않도록 빌드에서 제외. 이를 없앨 시 rm -rf _site 명령어를 수동 작업 해줘야 함
 keep_files:
   - .git
   - .svn
@@ -228,7 +228,9 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+paginame: 5 # 첫 페이지에보여줄 최근 게시물 수를 지정
+paginate_path: /page:num/
+timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Pagination with jekyll-paginate
@@ -324,3 +326,15 @@ defaults:
       comments: # true
       share: true
       related: true
+
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: true
+      related: false
